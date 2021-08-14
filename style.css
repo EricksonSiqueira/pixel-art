@@ -1,0 +1,29 @@
+*{
+  box-sizing: border-box;
+}
+
+.color {
+  display: inline-block;
+  margin-left: 10px;
+  border: 1px solid black;
+  min-width: 30px;
+  min-height: 30px;
+  cursor: pointer;
+}
+#pixel-board {
+  border: 1px solid black;
+}
+.pixel {
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
+  display: inline-block;
+  cursor: pointer;
+}
+.pixel-line {
+  max-height: 40px;
+  width: 100%;
+}
+#clear-board {
+  margin-bottom: 10px;
+}
