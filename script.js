@@ -80,18 +80,21 @@ fillButton.addEventListener('click', () => {
 });
 
 generateBoardButton.addEventListener('click', () => {
-  const inputText = document.getElementById('board-size').value;
-  const inputNumber = parseInt(inputText);
-  if (inputText === '') {
+  const inputTextHeigth = document.getElementById('board-heigth').value;
+  const inputTextWidth = document.getElementById('board-width').value;
+  const inputNumberHeigth = parseInt(inputTextHeigth);
+  const inputNumberWidth = parseInt(inputTextWidth)
+
+  if (inputTextHeigth === '' || inputTextWidth === '') {
     window.alert('Board inválido!');
-  } else if (inputNumber < 5) {
+  } else if (inputNumberHeigth < 5 || inputNumberWidth < 5) {
     window.alert('Valor baixo demais, considerando como 5.');
     creatPixelsBoard(5, 5);
-  } else if (inputNumber > 50) {
+  } else if (inputNumberHeigth > 50 || inputNumberWidth > 50) {
     window.alert('Valor alto demais, considerando como 50.');
     creatPixelsBoard(50, 50);
   } else {
-    creatPixelsBoard(inputNumber, inputNumber);
+    creatPixelsBoard(inputNumberHeigth, inputNumberWidth);
   }
 });
 
