@@ -3,8 +3,13 @@ const pixelBoard = document.getElementById('pixel-board');
 const clearButton = document.getElementById('clear-board');
 const generateBoardButton = document.getElementById('generate-board');
 const fillButton = document.getElementById('fill-board')
+const rgbColor = document.getElementById('rgb-color')
 let backgroundColorSelected = 'rgb(0,0,0)';
 
+
+rgbColor.addEventListener('input', () => {
+  backgroundColorSelected = rgbColor.value
+})
 function addClassAndBackgroundToColors(colors) {
   colors.unshift('rgb(0,0,0)');
   for (let i = 0; i < colors.length; i += 1) {
@@ -53,6 +58,7 @@ colorsUl.addEventListener('click', (e) => {
 
   element.classList.add('selected');
 });
+
 
 pixelBoard.addEventListener('click', (e) => {
   const element = e.target;
