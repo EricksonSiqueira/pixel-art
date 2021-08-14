@@ -2,6 +2,7 @@ const colorsUl = document.querySelector('.colors-ul');
 const pixelBoard = document.getElementById('pixel-board');
 const clearButton = document.getElementById('clear-board');
 const generateBoardButton = document.getElementById('generate-board');
+const fillButton = document.getElementById('fill-board')
 let backgroundColorSelected = 'rgb(0,0,0)';
 
 function addClassAndBackgroundToColors(colors) {
@@ -66,6 +67,13 @@ clearButton.addEventListener('click', () => {
   }
 });
 
+fillButton.addEventListener('click', () => {
+  const pixelsList = document.getElementsByClassName('pixel');
+  for (const pixel of pixelsList) {
+    pixel.style.backgroundColor = backgroundColorSelected;
+  }
+});
+
 generateBoardButton.addEventListener('click', () => {
   const inputText = document.getElementById('board-size').value;
   const inputNumber = parseInt(inputText);
@@ -96,6 +104,7 @@ function generatePaletColors(howMany) {
   }
   return colors;
 }
+
 const palleteColors = generatePaletColors(3);
 addClassAndBackgroundToColors(palleteColors);
 creatPixelsBoard(5, 5);
