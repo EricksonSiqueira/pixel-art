@@ -2,8 +2,14 @@ const colorsUl = document.querySelector('.colors-ul');
 const pixelBoard = document.getElementById('pixel-board');
 const clearButton = document.getElementById('clear-board');
 const generateBoardButton = document.getElementById('generate-board');
+const fillButton = document.getElementById('fill-board')
+const rgbColor = document.getElementById('rgb-color')
 let backgroundColorSelected = 'rgb(0,0,0)';
 
+
+rgbColor.addEventListener('input', () => {
+  backgroundColorSelected = rgbColor.value
+})
 function addClassAndBackgroundToColors(colors) {
   colors.unshift('rgb(0,0,0)');
   for (let i = 0; i < colors.length; i += 1) {
@@ -53,10 +59,10 @@ colorsUl.addEventListener('click', (e) => {
   element.classList.add('selected');
 });
 
+
 pixelBoard.addEventListener('click', (e) => {
   const element = e.target;
   element.style.backgroundColor = backgroundColorSelected;
-  console.log('clicou');
 });
 
 clearButton.addEventListener('click', () => {
@@ -66,19 +72,29 @@ clearButton.addEventListener('click', () => {
   }
 });
 
+fillButton.addEventListener('click', () => {
+  const pixelsList = document.getElementsByClassName('pixel');
+  for (const pixel of pixelsList) {
+    pixel.style.backgroundColor = backgroundColorSelected;
+  }
+});
+
 generateBoardButton.addEventListener('click', () => {
-  const inputText = document.getElementById('board-size').value;
-  const inputNumber = parseInt(inputText);
-  if (inputText === '') {
+  const inputTextHeigth = document.getElementById('board-heigth').value;
+  const inputTextWidth = document.getElementById('board-width').value;
+  const inputNumberHeigth = parseInt(inputTextHeigth);
+  const inputNumberWidth = parseInt(inputTextWidth)
+
+  if (inputTextHeigth === '' || inputTextWidth === '') {
     window.alert('Board inválido!');
-  } else if (inputNumber < 5) {
+  } else if (inputNumberHeigth < 5 || inputNumberWidth < 5) {
     window.alert('Valor baixo demais, considerando como 5.');
     creatPixelsBoard(5, 5);
-  } else if (inputNumber > 50) {
+  } else if (inputNumberHeigth > 50 || inputNumberWidth > 50) {
     window.alert('Valor alto demais, considerando como 50.');
     creatPixelsBoard(50, 50);
   } else {
-    creatPixelsBoard(inputNumber, inputNumber);
+    creatPixelsBoard(inputNumberHeigth, inputNumberWidth);
   }
 });
 
@@ -96,6 +112,7 @@ function generatePaletColors(howMany) {
   }
   return colors;
 }
+
 const palleteColors = generatePaletColors(3);
 addClassAndBackgroundToColors(palleteColors);
 creatPixelsBoard(5, 5);
