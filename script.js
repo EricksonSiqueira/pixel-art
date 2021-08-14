@@ -57,7 +57,6 @@ colorsUl.addEventListener('click', (e) => {
 pixelBoard.addEventListener('click', (e) => {
   const element = e.target;
   element.style.backgroundColor = backgroundColorSelected;
-  console.log('clicou');
 });
 
 clearButton.addEventListener('click', () => {
