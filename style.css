@@ -13,6 +13,7 @@
 
 #pixel-board {
   border: 1px solid black;
+  margin: auto;
 }
 
 .pixel {
@@ -31,3 +32,10 @@
 #clear-board {
   margin-bottom: 10px;
 }
+.main-content {
+  max-width: 1200px;
+  margin: auto;
+  background-color: green;
+  text-align: center;
+}
+
