@@ -70,8 +70,14 @@ body{
 #utilities{
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
+  margin-left: 300px;
+  width: 820px;
 }
 #btn-container {
   margin-top: 10px;
+}
+#rgb-color {
+  width: 40px;
+  height: 40px;
+  border: none;
 }
