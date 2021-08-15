@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
 * {
   box-sizing: border-box;
+  font-family: 'Teko', sans-serif;
 }
 body{
   background-image: url('Flat-Mountains.svg');
@@ -43,4 +45,22 @@ body{
 }
 .selected {
   border: 2px dotted yellow;
+}
+#title {
+  font-size: 70px;
+  max-height: 100px;
+  margin: 0 auto;
+  max-width: 1000px;
+  margin-top: 40px;
+  /*box-shadow: 3px 3px 10px  rgb(92, 6, 92);
+  background-color: rgb(219, 214, 214);
+  border: 3px solid black;*/
+}
+.cloud-img {
+  position: absolute;
+  z-index: -1;
+  top: -50px;
+  left: 230px;
+  height: 300px;
+  width: 900px;
 }
