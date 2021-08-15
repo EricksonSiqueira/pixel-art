@@ -64,3 +64,14 @@ body{
   height: 300px;
   width: 900px;
 }
+#btn-container, #color-palette {
+  display: inline-block;
+}
+#utilities{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+#btn-container {
+  margin-top: 10px;
+}
