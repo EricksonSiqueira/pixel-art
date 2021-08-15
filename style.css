@@ -1,6 +1,10 @@
 * {
   box-sizing: border-box;
 }
+body{
+  background-image: url('Flat-Mountains.svg');
+  background-size: 90%;
+}
 
 .color {
   display: inline-block;
@@ -35,7 +39,8 @@
 .main-content {
   max-width: 1200px;
   margin: auto;
-  background-color: green;
   text-align: center;
 }
-
+.selected {
+  border: 2px dotted yellow;
+}
