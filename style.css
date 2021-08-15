@@ -71,10 +71,16 @@ body{
   display: flex;
   justify-content: space-between;
   margin-left: 300px;
-  width: 820px;
+  width: 923px;
 }
 #btn-container {
   margin-top: 10px;
+  font-size: 25px;
+}
+.btn {
+  display: inline-block;
+  font-size: 20px;
+  background-color: rgb(241, 231, 82);
 }
 #rgb-color {
   width: 40px;
