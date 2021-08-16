@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
 * {
   box-sizing: border-box;
+  font-family: 'Teko', sans-serif;
+}
+body{
+  background-image: url('Flat-Mountains.svg');
+  background-size: 90%;
 }
 
 .color {
@@ -13,6 +19,7 @@
 
 #pixel-board {
   border: 1px solid black;
+  margin: auto;
 }
 
 .pixel {
@@ -30,4 +37,53 @@
 
 #clear-board {
   margin-bottom: 10px;
+}
+.main-content {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+.selected {
+  border: 2px dotted yellow;
+}
+#title {
+  font-size: 70px;
+  max-height: 100px;
+  margin: 0 auto;
+  max-width: 1000px;
+  margin-top: 40px;
+  /*box-shadow: 3px 3px 10px  rgb(92, 6, 92);
+  background-color: rgb(219, 214, 214);
+  border: 3px solid black;*/
+}
+.cloud-img {
+  position: absolute;
+  z-index: -1;
+  top: -50px;
+  left: 230px;
+  height: 300px;
+  width: 900px;
+}
+#btn-container, #color-palette {
+  display: inline-block;
+}
+#utilities{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 300px;
+  width: 923px;
+}
+#btn-container {
+  margin-top: 10px;
+  font-size: 25px;
+}
+.btn {
+  display: inline-block;
+  font-size: 20px;
+  background-color: rgb(241, 231, 82);
+}
+#rgb-color {
+  width: 40px;
+  height: 40px;
+  border: none;
 }

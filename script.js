@@ -12,6 +12,7 @@ rgbColor.addEventListener('input', () => {
 })
 function addClassAndBackgroundToColors(colors) {
   colors.unshift('rgb(0,0,0)');
+  colors.unshift('rgb(255,255,255)')
   for (let i = 0; i < colors.length; i += 1) {
     const li = document.createElement('li');
     if (i === 0) {
@@ -113,6 +114,6 @@ function generatePaletColors(howMany) {
   return colors;
 }
 
-const palleteColors = generatePaletColors(3);
+const palleteColors = generatePaletColors(0);
 addClassAndBackgroundToColors(palleteColors);
 creatPixelsBoard(5, 5);
