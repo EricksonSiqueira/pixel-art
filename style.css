@@ -5,7 +5,8 @@
 }
 body{
   background-image: url('Flat-Mountains.svg');
-  background-size: 90%;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .color {
