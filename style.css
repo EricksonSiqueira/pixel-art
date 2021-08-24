@@ -1,13 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: 'Teko', sans-serif;
-}
-body{
-  background-image: url('Flat-Mountains.svg');
-  background-size: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .color {
@@ -41,7 +37,7 @@ body{
   margin-bottom: 10px;
 }
 .main-content {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   text-align: center;
 }
@@ -49,31 +45,22 @@ body{
   border: 2px dotted yellow;
 }
 #title {
-  font-size: 70px;
+  font-size: 80px;
   max-height: 100px;
   margin: 0 auto;
   max-width: 1000px;
-  margin-top: 40px;
+  padding-top: 20px;
   /*box-shadow: 3px 3px 10px  rgb(92, 6, 92);
   background-color: rgb(219, 214, 214);
   border: 3px solid black;*/
 }
-.cloud-img {
-  position: absolute;
-  z-index: -1;
-  top: -50px;
-  left: 500px;
-  height: 300px;
-  width: 900px;
-}
-#btn-container, #color-palette {
-  display: inline-block;
-}
+
 #utilities{
   display: flex;
   justify-content: space-between;
-  margin-left: 300px;
-  width: 923px;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
 }
 #btn-container {
   margin-top: 10px;
@@ -88,4 +75,74 @@ body{
   width: 40px;
   height: 40px;
   border: none;
+}
+
+#montains {
+  top: 0;
+  height: 100vh;
+  background-image: url('Flat-Mountains-clouds.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+
+#color-palette, #btn-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#color-palette {
+  padding-right: 60px;
+  padding-left: 20px;
+}
+
+#btn-container {
+  justify-content: space-around;
+  padding-right: 20px;
+}
+
+#btn-container button {
+  margin: 5px 5px;
+  padding: 0 5px;
+}
+
+#btn-container input {
+  min-width: 50px;
+  margin-right: 5px;
+}
+
+#btn-container label {
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 1300px){
+  .main-content {
+    max-width: 1000px;
+
+  }
+  #utilities {
+    margin: 30px 0px;
+  }
+
+  #btn-container {
+    width: 300px;
+    margin: 0 10px;
+  }
+  #generate-board {
+    order: -1;
+  }
+  #clear-board, #fill-board {
+    order: -2;
+  }
+
+  #color-palette {
+    max-width: 300px;
+    margin: 0 10px;
+  }
+
+  #btn-container, #color-palette {
+    border: 2px solid black;
+    padding: 0 5px;
+  }
 }
