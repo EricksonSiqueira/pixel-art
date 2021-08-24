@@ -47,7 +47,7 @@ body{
   border: 2px dotted yellow;
 }
 #title {
-  font-size: 70px;
+  font-size: 80px;
   max-height: 100px;
   margin: 0 auto;
   max-width: 1000px;
@@ -55,14 +55,7 @@ body{
   background-color: rgb(219, 214, 214);
   border: 3px solid black;*/
 }
-.cloud-img {
-  position: absolute;
-  z-index: -1;
-  top: -50px;
-  left: 500px;
-  height: 300px;
-  width: 900px;
-}
+
 #btn-container, #color-palette {
   display: inline-block;
 }
@@ -90,7 +83,7 @@ body{
 #montains {
   top: 0;
   height: 100vh;
-  background-image: url('Flat-Mountains.svg');
+  background-image: url('Flat-Mountains-clouds.svg');
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
