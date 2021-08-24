@@ -37,7 +37,7 @@
   margin-bottom: 10px;
 }
 .main-content {
-  max-width: 1300px;
+  max-width: 1400px;
   margin: auto;
   text-align: center;
 }
@@ -127,6 +127,7 @@
 
   #btn-container {
     width: 300px;
+    margin: 0 10px;
   }
   #generate-board {
     order: -1;
@@ -137,5 +138,11 @@
 
   #color-palette {
     max-width: 300px;
+    margin: 0 10px;
+  }
+
+  #btn-container, #color-palette {
+    border: 2px solid black;
+    padding: 0 5px;
   }
 }

@@ -114,6 +114,6 @@ function generatePaletColors(howMany) {
   return colors;
 }
 
-const palleteColors = generatePaletColors(7);
+const palleteColors = generatePaletColors(10);
 addClassAndBackgroundToColors(palleteColors);
 creatPixelsBoard(5, 5);
